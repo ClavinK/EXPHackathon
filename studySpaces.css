@@ -47,7 +47,8 @@
 }
 
 .link{
-    size: 12px;
+    size: 14px;
+    align-items: center;
 }
 
 h2{
