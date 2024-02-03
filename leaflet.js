@@ -1,10 +1,5 @@
 var map = L.map('map').setView([34.058141235688744, -117.8214710327107], 17);
 
-map.locate({
-    setView: true,
-    maxZoom: 29
-});
-
 var hamburger = document.querySelector('.hamburger');
 
 // Select the navigation links
@@ -76,7 +71,10 @@ L.Control.RecenterButton = L.Control.extend({
         container.appendChild(afterElement);
 
         container.onclick = function () {
-            map.setView(originalCoords, 17); // Recent the map to the original coordinates
+            map.locate({
+    setView: true,
+    maxZoom: 29
+}); // Recent the map to the original coordinates
         };
 
         return container;
