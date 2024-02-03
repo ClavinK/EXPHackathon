@@ -1,0 +1,51 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    /*display: flex;*/
+    margin-top: 4%;
+    justify-content: space-around;
+    align-items: center; 
+    height: 100vh;
+}
+
+.each-container{
+    display: flex;
+    margin-bottom: 4%; /*Adds space below each section of image and text */
+    margin-left: 4%;
+    align-items: center; 
+}
+
+.image-container {
+    text-align: center; /*to center content*/
+}
+
+.image-container img{
+    width: 300px; /* Make the image responsive */
+    /*max-width: 400px; /*Set max width for image*/
+    height: 200px; /*Maintain aspect ratio*/
+    display: block; /*Remove any default inline styling on images*/
+    margin: 0 auto; /* Optional: Center the image */
+}
+
+.image-text{
+    margin-top: 10px; /*Adjust the margin to create space between image and text */
+    font-size: 16px; /*Optional: Set the font size for the text*/
+}
+
+.text-container{
+    width: 60%; /*rn*/
+    box-sizing: border-box;
+    align-items: center; 
+    margin: 10%;
+    /* padding-left: 100%; */
+    overflow-wrap:break-word; 
+
+}
+
+h2{
+    color: #333000;
+}
