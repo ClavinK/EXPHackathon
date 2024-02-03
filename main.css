@@ -420,6 +420,12 @@ article > p {
     color: #000000;
 
 }
+.bodymap {
+    margin: 0px;
+    padding: 0px;
+    background-color: #faf0e6;
+}
+
 HTML, .bodymap {
     height: 100%;
     width: 100%;
