@@ -1,62 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
 
-body {
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: black;
-}
+</head>
+<header class="site-header">
+    <div class="wrapper site-header__wrapper">
+        <a class="custom-button" href="homepage.html"><img src="cppbroncologo.png"/></a>
+        <nav class="navbar">
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    width: 600px;
-}
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="to-do.html">Planner</a></li>
+                <li><a href="test2.html" class="active">Study Spaces</a></li>
+            </ul>
 
-.todo-list,
-.completed-tasks {
-    list-style-type: none;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    height: 200px;
-    overflow-y: auto;
-    background-color: white;
-}
+        </nav>
 
-.task {
-    background-color: #fff;
-    padding: 10px;
-    margin: 5px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    cursor: grab;
-}
+        <main>
 
-.completed-task {
-    background-color: #d3ffd3;
-    padding: 10px;
-    margin: 5px;
-    border: 1px solid #a1eaa1;
-    border-radius: 3px;
-}
+        </main>
+    </div>
+</header>
 
-.drop-box{
-
-    border: 1px solid #ccc;
-    padding: 10px; 
-    text-align: center;
-    background-color: white;
+<body class="study-spaces">
     
-
-}
-
-.add-task-container{
-
-    position: absolute;
-    top: 200px; 
-    left: 450px; 
-
-}
+</body>
+</html>
