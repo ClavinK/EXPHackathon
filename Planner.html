@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,18 +10,23 @@
 </head>
 <header class="site-header">
     <div class="wrapper site-header__wrapper">
-        <a class="custom-button" href="homepage.html"><img src="cppbroncologo.png"/></a>
+        <a class="custom-button" href="homepage.html"><img src="cppbroncologo.png" /></a>
         <nav class="navbar">
 
             <ul>
                 <li><a href="homepage.html">Home</a></li>
-                <li><a href="test.html" class="active">Planner</a></li>
-                <li><a href="test2.html">Study Spaces</a></li>
+                <li><a href="Planner.html" class="active">Planner</a></li>
+                <li>
+                    <a href="flashcard.html">Flashcards</a>
+                </li>
+                <li><a href=" StudySpaces.html">Study Spaces</a>
+                </li>
             </ul>
 
         </nav>
     </div>
 </header>
+
 <body class="planner">
     <div class="task-container" ondrop="drop(event)" ondragover="allowDrop(event)">
         <div class="todo-list" id="todo-list">
@@ -43,7 +49,8 @@
         <input type="text" id="new-task" placeholder="Enter a new task">
         <button onclick="addNewTask()">Add Task</button>
     </div>
- 
-    
-</body> 
+
+
+</body>
+
 </html>
