@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
+    <script src="to-do.js"></script>
 </head>
 <header class="site-header">
     <div class="wrapper site-header__wrapper">
@@ -18,12 +19,31 @@
             </ul>
 
         </nav>
-
-        <main>
-
-        </main>
     </div>
 </header>
-<body>
-</body>
+<body class="planner">
+    <div class="task-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="todo-list" id="todo-list">
+            <!-- Tasks will be added here -->
+        </div>
+        <div class="drop-box" id="drop-box-1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            Urgent, Important
+        </div>
+        <div class="drop-box" id="drop-box-2" ondrop="drop(event)" ondragover="allowDrop(event)">
+            Not Urgent, Important
+        </div>
+        <div class="drop-box" id="drop-box-3" ondrop="drop(event)" ondragover="allowDrop(event)">
+            Urgent, Not Important
+        </div>
+        <div class="drop-box" id="drop-box-4" ondrop="drop(event)" ondragover="allowDrop(event)">
+            Not Urgent, Not Important
+        </div>
+    </div>
+    <div class="add-task-container">
+        <input type="text" id="new-task" placeholder="Enter a new task">
+        <button onclick="addNewTask()">Add Task</button>
+    </div>
+ 
+    
+</body> 
 </html>
