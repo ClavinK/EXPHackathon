@@ -2,6 +2,8 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: black;
+    color: white;
 }
 
 .container{
@@ -46,10 +48,22 @@
 
 }
 
-.link{
+.btn{
+    text-align: center; /*to center content*/
+    display: flex;
+    margin: auto; /* Optional: Center the image */
+}
+
+#mapsButton{
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* .link{
     size: 14px;
     align-items: center;
-}
+} */
 
 h2{
     color: #333000;
