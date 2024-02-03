@@ -2,7 +2,7 @@ var map = L.map('map').setView([34.058141235688744, -117.8214710327107], 17);
 
 map.locate({
     setView: true,
-    maxZoom: 19
+    maxZoom: 29
 });
 
 var hamburger = document.querySelector('.hamburger');
