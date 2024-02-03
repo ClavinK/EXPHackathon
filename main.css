@@ -247,3 +247,64 @@ article > p {
     left: 450px; 
 
 }
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #faf0e6;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+   }
+   .hamburger {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 2rem;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: none; /* Hidden by default */
+   }
+   
+   .nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+   }
+   
+   /* Hide the navigation links by default */
+   .nav-links li {
+    display: none;
+   }
+   
+   /* Show the navigation links on larger screens */
+   @media (min-width: 600px) {
+    .nav-links li {
+       display: block;
+    }
+    .hamburger {
+       display: none;
+    }
+   }
+   
+   /* Apply the full screen styles to the map div */
+   #map {
+    height: 100%;
+    width: 100%;
+   }
+
+.map-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width: 768px) {
+    .map-container {
+      flex-direction: row;
+    }
+  }
