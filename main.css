@@ -416,13 +416,13 @@ article > p {
     color: #000000;
 
 }
-.bodymap {
+body {
     margin: 0px;
     padding: 0px;
     background-color: #faf0e6;
 }
 
-HTML, .bodymap {
+HTML, body{
     height: 100%;
     width: 100%;
     margin: 0;
