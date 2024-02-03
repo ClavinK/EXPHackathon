@@ -1,78 +1,54 @@
-const ITEMS_CONTAINER = document.getElementById("items");
-const ITEM_TEMPLATE = document.getElementById("itemTemplate");
-const ADD_BUTTON = document.getElementById("add");
+let taskIdCounter = 0;
 
-let items = getItems();
-
-function getItems(){
-
-    const value = localStorage.getItem("todo")  || "[]";
-    console.log(value);
-
-    return JSON.parse(value);
+function drag(event) {
+    event.dataTransfer.setData("text/plain", event.target.id);
 }
 
-function setItems(items){
-    const itemsJson = JSON.stringify(items);
-    localStorage.setItem("todo", itemsJson);
+function allowDrop(event) {
+    event.preventDefault();
 }
 
-function addItem(){
-    items.unshift({
-        description: "",
-        completed: false
-    });
-    setItems(items);
-    refreshList();
-}
+function drop(event) {
+    event.preventDefault();
+    const taskId = event.dataTransfer.getData("text/plain");
+    const draggedTask = document.getElementById(taskId);
+    const dropZone = event.target;
 
-function updateItem(item,key, value){
-    item[key] = value;
-    setItems(items);
-    refreshList();
-}
-
-
-
-function refreshList(){
-    // sort items alphabetically
-    items.sort((a,b) => {
-        if(a.completed){
-            return 1;
-        }
-        if(b.completed){
-            return -1;
-        }
-        return a.description < b.description ? -1 : 1;
-    });
-
-    ITEMS_CONTAINER.innerHTML="";
-    for(const item of items){
-        const itemElement = ITEM_TEMPLATE.content.cloneNode(true);
-        const descriptionInput = itemElement.querySelector(".item-description");
-        const completedInput = itemElement.querySelector(".item-completed");
-
-        descriptionInput.value = item.description;
-        completedInput.checked = item.completed;
-
-        descriptionInput.addEventListener("change", () =>{
-            updateItem(item, "description", descriptionInput.value);
-
-        });
-        completedInput.addEventListener("change", () =>{
-            updateItem(item, "completed", completedInput.checked);
-
-        });
-
-        ITEMS_CONTAINER.append(itemElement);
-
+    // Check if the drop target is a valid drop zone
+    if (dropZone && dropZone.classList.contains("drop-box")) {
+        // Append the dragged task to the drop zone
+        dropZone.appendChild(draggedTask);
     }
-
-
 }
 
-ADD_BUTTON.addEventListener("click", () => {
-    addItem();
-});
+function addNewTask() {
+    const newTaskInput = document.getElementById("new-task");
+    const taskText = newTaskInput.value.trim();
 
-refreshList(); 
+    if (taskText !== "") {
+        const taskId = "task" + (++taskIdCounter);
+
+        const newTask = document.createElement("div");
+        newTask.classList.add("task");
+        newTask.draggable = true;
+        newTask.id = taskId;
+        newTask.textContent = taskText;
+
+        // Apply the drag-and-drop event listeners directly to the new task
+        newTask.addEventListener("dragstart", drag);
+
+        // Append the new task to the todo list
+        const todoList = document.getElementById("todo-list");
+        todoList.appendChild(newTask);
+
+        // Clear the input field
+        newTaskInput.value = "";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector(".container");
+
+    container.addEventListener("dragover", allowDrop);
+    container.addEventListener("drop", drop);
+});
