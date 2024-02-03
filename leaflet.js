@@ -2,7 +2,7 @@ var map = L.map('map').setView([34.058141235688744, -117.8214710327107], 17);
 
 map.locate({
     setView: true,
-    maxZoom: 17
+    maxZoom: 19
 });
 
 var hamburger = document.querySelector('.hamburger');
@@ -19,7 +19,7 @@ hamburger.addEventListener('click', function () {
 var originalCoords = [34.058141235688744, -117.8214710327107];
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 21,
+    maxZoom: 29,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
