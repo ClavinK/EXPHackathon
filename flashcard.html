@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="flashcard.css">
+    <title>Flashcard Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Flashcard Generator</h1>
+        <form id="flashcardForm">
+            <label for="question">Question:</label>
+            <textarea id="question" rows="4" cols="50" required></textarea>
+
+            <label for="answer">Answer:</label>
+            <textarea id="answer" rows="4" cols="50" required></textarea>
+
+            <button type="button" onclick="addFlashcard()">Add Flashcard</button>
+        </form>
+
+        <div id="flashcardsContainer"></div>
+    </div>
+
+    <script src="flashcard.js"></script>
+</body>
+</html>
