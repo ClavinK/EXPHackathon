@@ -1,3 +1,9 @@
+/*--------- General CSS ---------*/
+body{
+
+    margin: 0px;
+
+}
 .item-description{
 
     padding: 5px;
@@ -22,12 +28,27 @@
 
 
 }
+/*--------- Website Header ---------*/
 .site-header {
     padding: 20px;
     margin: 0px;
     background: #1D4231;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 0px;
+
+}
+
+.site-title{
+
+    position: absolute;
+    top: 40px;
+    left: 400px;
+    float: center;
+    font-size: 40px;
+    color: #ffffff;
+    font-family: Georgia, serif;
+    
 
 }
 
@@ -97,7 +118,7 @@ img{
     background-color: #000000;
 
 }
-
+/*--------- HomePage CSS ---------*/
 .article-header{
 
     display: grid;
@@ -115,6 +136,14 @@ img{
     animation: fade-out linear;
     animation-timeline: view();
     animation-range: exit -200px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.header-content > p {
+
+    margin: 0px;
+    font-family: Georgia, sans-serif;
 
 }
 
@@ -172,6 +201,11 @@ article {
 
     }
 }
+article > h1{
+
+    color: #ffffff;
+    font-size: 75px;
+}
 article > h2 {
 
     color: white;
@@ -186,6 +220,8 @@ article > p {
     height: 180px; 
 
 }
+
+/*---------  ToDo CSS ---------*/
 .planner {
     margin: 0px;
     padding: 0px;
@@ -248,63 +284,139 @@ article > p {
 
 }
 
-body {
-    margin: 0px;
-    padding: 0px;
-    background-color: #faf0e6;
-}
-
-html, body {
-    height: 100%;
+/*---------  Drag&Drop CSS ---------*/
+.task-container {
     width: 100%;
-    margin: 0;
-    padding: 0;
-   }
-   .hamburger {
-    display: inline-block;
-    cursor: pointer;
-    font-size: 2rem;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    display: none; /* Hidden by default */
-   }
-   
-   .nav-links {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-   }
-   
-   /* Hide the navigation links by default */
-   .nav-links li {
-    display: none;
-   }
-   
-   /* Show the navigation links on larger screens */
-   @media (min-width: 600px) {
-    .nav-links li {
-       display: block;
-    }
-    .hamburger {
-       display: none;
-    }
-   }
-   
-   /* Apply the full screen styles to the map div */
-   #map {
-    height: 100%;
-    width: 100%;
-   }
-
-.map-container {
-    position: relative;
-    height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    margin: 50px 0 0 0;
 }
-@media (max-width: 768px) {
-    .map-container {
-      flex-direction: row;
-    }
-  }
+
+.drag-and-drop-container {
+    width: 100%;
+    margin-top:0px;
+    padding-top: 0px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.task-container h1 {
+
+    position: absolute;
+    top: center;
+    left: center;
+    background-color:#2E5342;
+    margin: 0;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+}
+.LCtitle{
+
+    position: absolute;
+    top: center;
+    left: center;
+    background-color:#2E5342;
+    margin: 0;
+    width: 24%;
+    padding: 0.5rem 1rem;
+    box-sizing:border-box;
+
+}
+
+.centerTitle{
+
+    position: absolute;
+    top: center;
+    left: center;
+    background-color:#2E5342;
+    margin: 0;
+    width: 24%;
+    padding: 0.5rem 1rem;
+    box-sizing:border-box;
+
+
+}
+
+.RCtitle {
+
+    position: absolute;
+    top: center;
+    left: center;
+    background-color:#2E5342;
+    margin: 0;
+    width: 24%;
+    padding: 0.5rem 1rem;
+    box-sizing:border-box;
+
+
+}
+
+.rightTitle {
+
+    position: absolute;
+    top: center;
+    left: center;
+    background-color:#2E5342;
+    margin: 0;
+    width: 24%;
+    padding: 0.5rem 1rem;
+    box-sizing:border-box;
+
+
+}
+
+#topmid {
+    width: calc(100% - 10px);
+    margin-top: 0px;
+    min-height: 200px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    border: 2px dashed #F9AD16;
+    background-color: #1D4231;
+    text-align: center;
+    color: #ffffff;
+    
+    
+}
+
+#left,
+#leftcenter,
+#rightcenter,
+#right {
+    width: calc((100% - 30px) / 4);
+    min-height: 500px;
+    margin: 5px;
+    border: 2px dashed #F9AD16;
+    background-color: #1D4231;
+    text-align: center; 
+    color: #ffffff;
+}
+
+#add_btn{
+
+    padding: 0.5rem 1rem;
+    background-color:#ffffff;
+    outline: none;
+    border: none;
+    width: 15%;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    top: 200px;
+    left: 535px;
+    box-sizing: border-box;
+}
+
+#add_btn:hover {
+
+    background-color: #F9AD16;
+    color: #000000;
+
+}

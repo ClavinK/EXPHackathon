@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="main.css">
+    
+    <title>Drag and Drop To-Do List</title>
     <script src="to-do.js"></script>
 </head>
 <header class="site-header">
     <div class="wrapper site-header__wrapper">
-        <a class="custom-button" href="homepage.html"><img src="cppbroncologo.png"/></a>
+        <a class="custom-button" href="homepage.html"><img src="cppbroncologo.png" class="nav-logo"/></a>
         <nav class="navbar">
 
             <ul>
                 <li><a href="homepage.html">Home</a></li>
-                <li><a href="test.html" class="active">Planner</a></li>
+                <li><a href="to-do.html" class="active">Planner</a></li>
                 <li><a href="test2.html">Study Spaces</a></li>
             </ul>
 
         </nav>
     </div>
 </header>
-<body class="planner">
+
+<body class="planner-body">
     <div class="task-container" ondrop="drop(event)" ondragover="allowDrop(event)">
         <div class="todo-list" id="todo-list">
             <!-- Tasks will be added here -->
