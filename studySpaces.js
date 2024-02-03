@@ -1,3 +1,4 @@
-document.getElementById('mapsButton').addEventListener('click',function(){
-    window.location.href = 'maps.html';
+document.getElementById('mapsButton').addEventListener('click', function() {
+    var mapContainer = document.getElementById('map');
+    mapContainer.style.display = mapContainer.style.display === 'none' ? 'block' : 'none';
 });
