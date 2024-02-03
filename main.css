@@ -20,4 +20,84 @@
     cursor: pointer;
 
 
+
+}
+.site-header {
+    padding: 20px;
+    margin: 0px;
+    background: #1D4231;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navbar{
+
+    float: right;
+    margin-top: 5.5px;
+
+}
+.navbar ul{
+
+    list-style: none;
+    background-color:#1D4231;
+    padding: 0px;
+    margin: 0px;
+    font-size: 15px;
+    font-family: Georgia, serif;
+    overflow: hidden;
+
+}
+
+.navbar a{
+
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px;
+    display:block;
+    text-align:right;
+    
+}
+
+.navbar a:visited{
+
+    background-color: #F9AD16;
+
+}
+.navbar a:focus{
+
+    background-color:#F9AD16;
+
+}
+.navbar a:hover{
+
+    background-color: #F9AD16;
+
+}
+.navbar a.active{
+
+    background-color:#F9AD16;
+    color: #000000;
+
+}
+
+.navbar li{
+
+    float:left;
+
+}
+
+img{
+    height: 60px;
+
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #faf0e6;
+
+}
+#map { 
+    height: 180px; 
+
 }
